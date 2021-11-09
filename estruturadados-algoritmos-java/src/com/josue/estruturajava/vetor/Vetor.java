@@ -1,5 +1,9 @@
 package com.josue.estruturajava.vetor;
 
+import java.util.Arrays;
+
+//import com.sun.tools.classfile.StackMapTable_attribute.append_frame;
+
 public class Vetor {
 	
 	private String[] elementos;
@@ -30,7 +34,7 @@ public class Vetor {
 		
 	}*/
 	
-public boolean adiciona(String elemento){
+	public boolean adiciona(String elemento){
 		
 		if(this.tamanho <= this.elementos.length) {
 			this.elementos[this.tamanho] = elemento;
@@ -39,5 +43,25 @@ public boolean adiciona(String elemento){
 		}
 		return false;
 	}
+	public int tamanho() {
+		return this.tamanho;
+}
+
+	@Override
+	public String toString() {
+		StringBuilder s = new StringBuilder();
+		s.append("[");
+		for(int i = 0; i < this.tamanho - 1; i++) {
+			s.append(this.elementos[i]);
+			s.append(",");
+		}
+		if(this.tamanho > 0) {
+			s.append(this.elementos[this.tamanho -1]);
+		}
+		s.append("]");
+		
+		return s.toString();
+	}
+
 
 }
