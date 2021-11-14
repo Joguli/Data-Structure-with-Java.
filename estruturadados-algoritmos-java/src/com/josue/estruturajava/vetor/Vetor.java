@@ -9,6 +9,8 @@ public class Vetor {
 	private String[] elementos;
 	private int tamanho;
 	
+//  Refazer Aula 5  **************************************************************
+	
 	public Vetor(int capacidade) {
 		this.elementos = new String[capacidade];
 		this.tamanho = 0;
@@ -43,6 +45,12 @@ public class Vetor {
 		}
 		return false;
 	}
+	
+	public String busca(int posicao) {
+		
+		return this.elementos[posicao];
+	}
+	
 	public int tamanho() {
 		return this.tamanho;
 }
