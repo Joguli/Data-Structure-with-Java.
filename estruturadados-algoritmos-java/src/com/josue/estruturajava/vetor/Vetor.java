@@ -90,20 +90,17 @@ public class Vetor {
 		return -1;
 	}
 	// REMOVE  ========================================================================
-	public void remove() {
-		for(int i = 0; i < this.tamanho; i++) {
-			if(this.elementos[i] == this.elementos[i+ 1]) {
-				for(int j = 0; j < this.tamanho; j++) {
-					this.elementos[i] = this.elementos[i +1];					
-				}
-			}
+	public void remove(int posicao) {
+		
+		if(!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Argumento inválido. ");
 		}
 		
-		for(int pos = 0; pos < this.tamanho; pos++) {
-			if(this.elementos[pos] == "0") {
-				this.tamanho = this.tamanho - 1;
-			}
+		for(int i = posicao; i < this.tamanho - 1; i++) {
+					this.elementos[i] = this.elementos[i + 1];					
 		}
+		
+		this.tamanho--;
 	}
 	
 	

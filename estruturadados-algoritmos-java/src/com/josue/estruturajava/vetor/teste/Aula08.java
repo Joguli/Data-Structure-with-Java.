@@ -11,7 +11,7 @@ public class Aula08 {
 		
 		vetor.adiciona("B");
 		vetor.adiciona("C");
-		vetor.adiciona("E");
+		vetor.adiciona("D");
 		vetor.adiciona("E");
 		vetor.adiciona("G");
 		
