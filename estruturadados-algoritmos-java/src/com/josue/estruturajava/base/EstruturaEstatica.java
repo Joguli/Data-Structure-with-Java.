@@ -4,8 +4,8 @@ import java.lang.reflect.Array;
 
 public class EstruturaEstatica<T> {
 
-	private T[] elementos;
-	private int tamanho;
+	protected T[] elementos;
+	protected int tamanho;
 	
 //  Refazer Aula 5  **************************************************************
 	
@@ -49,7 +49,7 @@ public class EstruturaEstatica<T> {
 		return true;
 	}
 	
-	private void aumentaCapacidade() {
+	protected void aumentaCapacidade() {
 		if(this.tamanho == this.elementos.length) {
 			T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
 			for(int i = 0; i < this.elementos.length; i++) {
