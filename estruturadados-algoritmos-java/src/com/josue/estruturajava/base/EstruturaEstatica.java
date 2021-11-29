@@ -20,6 +20,10 @@ public class EstruturaEstatica<T> {
 		this(10);
 	}
 	
+	public boolean estaVazia() {
+		return this.tamanho = 0;
+	}
+	
 	public EstruturaEstatica(int capacidade, Class<T> tipoClasse) {
 		this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
 		this.tamanho = 0;
